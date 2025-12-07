@@ -2,12 +2,13 @@ pipeline {
   agent any
 
   environment {
-    DOCKERHUB_REPO = "khaledelnabawy1/url-shortener"
-    IMAGE_TAG = "${env.BUILD_NUMBER}"
-    CD_REPO = "https://github.com/Khaled-elnabawy/ArgoCD-Pipeline.git"
-    CD_REPO_PATH = "."
-    DEPLOY_FILE = "ArgoCD-Application/deployment.yaml"
-  }
+  DOCKERHUB_REPO = 'khaledelnabawy1/url-shortener'
+  IMAGE_TAG      = "${env.BUILD_NUMBER}"
+  CD_REPO        = 'https://github.com/Khaled-elnabawy/ArgoCD-Pipeline.git'
+  CD_REPO_PATH   = '.'
+  DEPLOY_FILE    = 'ArgoCD-Application/deployment.yaml'
+}
+
 
   stages {
 
